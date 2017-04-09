@@ -1,0 +1,23 @@
+<div class="container">	
+	<div class="col-md-8">	
+		<table datatable="" dt-options="reviewPage.dtOptions" dt-columns="reviewPage.dtColumns" class="row-border hover">
+		</table>
+	</div>
+
+	<div class="col-md-4">
+		<div class="panel panel-default" ng-if="reviewPage.courseData">
+			<div class="panel-heading">
+				<h2 class="panel-title"><strong>Course Number:</strong> {{reviewPage.courseData.dept_id + reviewPage.courseData.number}}</h2>
+			</div>
+			<div class="panel-body">
+				<p><strong>Course Name:</strong> {{reviewPage.courseData.name}}</p>
+				<p><strong>Department:</strong> {{reviewPage.courseData.dept_id}}</p>
+				<p><strong>Professor:</strong> {{reviewPage.courseData.prof}}</p>
+				<p><strong>Credits:</strong> {{reviewPage.courseData.credits}}</p>
+				<p><strong>Semester:</strong> {{reviewPage.courseData.sem}}</p>
+				<a ng-href="#!/writeReview?course={{reviewPage.courseData.dept_id + reviewPage.courseData.number}}"><button type="button" class="btn btn-primary">Write a Review</button></a>
+				<a ng-href="#!/writeReview?course={{reviewPage.courseData.dept_id + reviewPage.courseData.number}}"><button type="button" class="btn btn-primary">View all Reviews</button></a>
+			</div>
+		</div>
+	</div>
+</div>
